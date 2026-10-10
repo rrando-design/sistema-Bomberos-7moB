@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de emergencia</title>
+    <link rel="stylesheet" href="CSS/emergencias.css">
+</head>
+<body>
+        
+    <div id="menu">
+        <h1> REGISTRO DE EMERGENCIAS</h1>
+        <P>Bomberos voluntarios G.D.C</P>
+        <nav>
+            <a href="index.html" id="inicio-menu">Inicio</a>
+            <div id="textos-azules">
+                <a href="emergencias.html">Incidentes</a>
+                <a href="materiales.html">Materiales</a>
+                <a href="vehiculos.html">Vehículos</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div id="principal">
+            <header>
+                <h1>Bomberos</h1>
+                <p>Guardia General Daniel Cerri</p>
+                <img src="Imagenes\INICIO.png">
+                <p id="fecha">9/11/2026</p> 
+            </header>
+
+        <div id="tabla-registro">
+            <div class="tarjeta">
+                <h2>Datos de la emergencia</h2>
+
+                <div class="fila fila-hora">
+                    <div class="grupo">
+                        <label for="hora-emergencia">Hora</label>
+                        <input class="campo" type="time" id="hora-emergencia">
+                    </div>
+                    <div class="grupo">
+                        <label for="tipo">Tipo de emergencia</label>
+                        <select class="campo" id="tipo">
+                            <option value="">Elegir tipo...</option>
+                            <option value="1">Incendio</option>
+                            <option value="2">Accidente de tránsito</option>
+                            <option value="3">Fuga de gas</option>
+                            <option value="4">Rescate</option>
+                            <option value="5">Otro</option>
+                        </select>
+                    </div>
+                    <div class="grupo">
+                        <label for="direccion">Dirección</label>
+                        <input class="campo" type="text" id="direccion" placeholder="Ej: Alem 2456">
+                    </div>
+                </div>
+
+                <div class="grupo">
+                    <label for="descripcion">Descripción</label>
+                    <textarea class="campo grande" id="descripcion" placeholder="Qué pasó, cómo se actuó..."></textarea>
+                </div>
+            </div>
+
+         
+            <div class="tarjeta">
+                <h2>Vehículos que participaron</h2>
+                <div class="opciones">
+                    <label class="opcion"><input type="checkbox"> Móvil 1</label>
+                    <label class="opcion"><input type="checkbox"> Móvil 2</label>
+                    <label class="opcion"><input type="checkbox"> Móvil 4</label>
+                </div>
+            </div>
+
+            
+            <div class="tarjeta">
+                <h2>Persona accidentada (si hubo)</h2>
+
+                <div class="fila fila-4">
+                    <div class="grupo">
+                        <label for="p-nombre">Nombre</label>
+                        <input class="campo" type="text" id="p-nombre">
+                    </div>
+                    <div class="grupo">
+                        <label for="p-apellido">Apellido</label>
+                        <input class="campo" type="text" id="p-apellido">
+                    </div>
+                    <div class="grupo">
+                        <label for="p-dni">DNI</label>
+                        <input class="campo" type="text" id="p-dni">
+                    </div>
+                    <div class="grupo">
+                        <label for="p-telefono">Teléfono</label>
+                        <input class="campo" type="text" id="p-telefono">
+                    </div>
+                </div>
+
+                <div class="fila fila-edad">
+                    <div class="grupo">
+                        <label for="p-edad">Edad</label>
+                        <input class="campo" type="number" id="p-edad">
+                    </div>
+                    <div class="grupo">
+                        <label for="p-sexo">Sexo</label>
+                        <select class="campo" id="p-sexo">
+                            <option value="">Elegir...</option>
+                            <option value="F">Femenino</option>
+                            <option value="M">Masculino</option>
+                            <option value="O">Otro</option>
+                        </select>
+                    </div>
+                    <div class="grupo">
+                        <label for="p-estado">Estado</label>
+                        <select class="campo" id="p-estado">
+                            <option value="">Elegir estado...</option>
+                            <option value="sin-lesiones">Sin lesiones</option>
+                            <option value="leve">Leve</option>
+                            <option value="moderado">Moderado</option>
+                            <option value="grave">Grave</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grupo">
+                    <label for="p-observaciones">Observaciones</label>
+                    <textarea class="campo grande" id="p-observaciones"></textarea>
+                </div>
+            </div>
+
+
+            <div class="tarjeta">
+                <h2>¿Quiénes participaron?</h2>
+
+                <div class="dos-columnas">
+                    <div>
+                        <p>Seleccionar los que participaron</p>
+                        <ul id="lista-bomberos">
+                            <li class="elegido"><span>Gómez, Carlos</span><span class="legajo">Legajo 101</span></li>
+                            <li><span>López, Mariana</span><span class="legajo">Legajo 102</span></li>
+                            <li class="elegido"><span>Cirio, Martin</span><span class="legajo">Legajo 169</span></li>
+                            <li><span>Martínez, Sofía</span><span class="legajo">Legajo 104</span></li>
+                            <li><span>Rodríguez, Diego</span><span class="legajo">Legajo 105</span></li>
+                            <li class="elegido"><span>Garcia, Valentina</span><span class="legajo">Legajo 106</span></li>
+                            <li><span>Álvarez, Mateo</span><span class="legajo">Legajo 107</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p>Participaron (3)</p>
+                        <ul id="participantes">
+                            <li>
+                                <span class="nombre">Gómez, Carlos</span>
+                                <label class="mini"><input type="checkbox" checked> Presente</label>
+                                <button type="button" class="quitar">✕</button>
+                            </li>
+                            <li>
+                                <span class="nombre">Fernández, Lucas</span>
+                                <label class="mini"><input type="checkbox" checked> Presente</label>
+                                <button type="button" class="quitar">✕</button>
+                            </li>
+                            <li>
+                                <span class="nombre">Sosa, Valentina</span>
+                                <label class="mini"><input type="checkbox" checked> Presente</label>
+                                <button type="button" class="quitar">✕</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="boton">
+                <button id="guardar-emergencia">Guardar emergencia</button>
+            </div>
+
+        </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <footer>
+        <p>	© 2026 Rando Rihana Bomberos voluntarios - Todos los derechos reservados.</p>
+        <img src="Imagenes\fondoPantallaA.jpg">
+    </footer>
+</body>
+</html>

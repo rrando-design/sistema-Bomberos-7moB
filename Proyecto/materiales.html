@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales</title>
+    <link rel="stylesheet" href="CSS/materiales.css">
+</head>
+<body>
+
+    <div id="menu">
+        <h1> BOMBEROS</h1>
+        <P>Sistema de emergencias</P>
+        <nav>
+            <a href="index.html" id="inicio-menu">Inicio</a>
+            <div id="textos-azules">
+                <a href="emergencias.html">Incidentes</a>
+                <a href="materiales.html">Materiales</a>
+                <a href="vehiculos.html">Vehículos</a>
+            </div>
+        </nav>
+  </div>
+
+
+    <div id="principal">
+        <header>
+            <h1>Materiales</h1>
+            <p>Guardia General Daniel Cerri</p>
+            <img src="Imagenes/INICIO.png">
+            <p id="fecha">9/10/2026</p>
+        </header>
+
+        <div id="tabla-registro">
+
+            <div class="tarjeta">
+                <h2>Agregar material</h2>
+
+                <div class="fila fila-material">
+                    <div class="grupo">
+                        <label for="m-nombre">Nombre</label>
+                        <input class="campo" type="text" id="m-nombre" placeholder="Ej: Manguera 45 mm">
+                    </div>
+                <div class="grupo">
+                    <label for="m-categoria">Categoría</label>
+                    <select class="campo" id="m-categoria">
+                        <option value="">Elegir...</option>
+                        <option value="1">Mangueras</option>
+                        <option value="2">Herramientas</option>
+                        <option value="3">Protección personal</option>
+                         <option value="4">Extintores</option>
+                    </select>
+                    </div>
+
+                <div class="grupo">
+                    <label for="m-cantidad">Cantidad</label>
+                    <input class="campo" type="number" id="m-cantidad" min="0">
+                </div>
+                    
+                <div class="grupo">
+                    <label for="m-estado">Estado</label>
+                    <select class="campo" id="m-estado">
+                        <option value="">Elegir...</option>
+                        <option value="bueno">Bueno</option>
+                        <option value="regular">Regular</option>
+                        <option value="malo">Malo</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="grupo">
+                    <label for="m-descripcion">Descripción</label>
+                    <input class="campo" type="text" id="m-descripcion" placeholder="Detalles del material...">
+                </div>
+
+                <div id="boton">
+                    <button id="guardar-emergencia">Guardar material</button>
+                </div>
+            </div>
+
+            
+
+
+
+            <div class="tarjeta">
+                <h2>Inventario</h2>
+                <div class="tabla-scroll">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Estado</th>
+                            <th>Cantidad</th>
+                            <th>Descripción</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Manguera 45 mm</td>
+                            <td>Mangueras</td>
+                            <td><span class="estado bueno">Bueno</span></td>
+                            <td>12</td>
+                            <td>Tramos de 25 metros</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Hacha</td>
+                            <td>Herramientas</td>
+                            <td><span class="estado regular">Regular</span></td>
+                            <td>4</td>
+                            <td>Para rescate y ventilación</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Casco</td>
+                            <td>Protección personal</td>
+                            <td><span class="estado bueno">Bueno</span></td>
+                            <td>20</td>
+                            <td>Casco estructural</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Extintor ABC 10 kg</td>
+                            <td>Extintores</td>
+                            <td><span class="estado malo">Malo</span></td>
+                            <td>2</td>
+                            <td>Pendiente de recarga</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            
+            <div class="tarjeta">
+                <h2>Registrar movimiento</h2>
+
+                <div class="fila fila-mov">
+                    <div class="grupo">
+                        <label for="mov-material">Material</label>
+                        <select class="campo" id="mov-material">
+                            <option value="">Elegir material...</option>
+                            <option value="1">Manguera 45 mm</option>
+                            <option value="2">Hacha</option>
+                            <option value="3">Casco</option>
+                            <option value="4">Extintor ABC 10 kg</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo">
+                        <label for="mov-fecha">Fecha</label>
+                        <input class="campo" type="date" id="mov-fecha">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="mov-tipo">Tipo</label>
+                        <select class="campo" id="mov-tipo">
+                            <option value="">Elegir...</option>
+                            <option value="compra">Compra</option>
+                            <option value="donacion">Donación</option>
+                            <option value="emergencia">Uso en emergencia</option>
+                            <option value="reparacion">Reparación</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo">
+                        <label for="mov-ingreso">Ingreso</label>
+                        <input class="campo" type="number" id="mov-ingreso" min="0">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="mov-retiro">Retiro</label>
+                        <input class="campo" type="number" id="mov-retiro" min="0">
+                    </div>
+
+                </div>
+
+
+                <div class="grupo">
+                    <label for="mov-obs">Observaciones</label>
+                    <input class="campo" type="text" id="mov-obs" placeholder="Ej: usado en incendio de Alem 2456">
+                </div>
+
+                <div id="boton">
+                    <button id="guardar-emergencia">Guardar movimiento</button>
+                </div>
+
+            </div>
+
+            <div class="tarjeta">
+                <h2>Historial de movimientos</h2>
+                <div class="tabla-scroll">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Fecha</th>
+                            <th>Material</th>
+                            <th>Tipo</th>
+                            <th>Ingreso</th>
+                            <th>Retiro</th>
+                            <th>Observaciones</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>05/10/2026</td>
+                            <td>Manguera 45 mm</td>
+                            <td>Uso en emergencia</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>Incendio en Alem 2456</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>07/10/2026</td>
+                            <td>Casco</td>
+                            <td>Donación</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>Donado por vecinos</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Rando Rihana Bomberos voluntarios - Todos los derechos reservados.</p>
+        <img src="Imagenes/fondoPantallaA.jpg">
+    </footer>
+    
+</body>
+</html>

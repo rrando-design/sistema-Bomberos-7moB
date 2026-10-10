@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehiculos</title>
+    <link rel="stylesheet" href="CSS/vehiculos.css">
+</head>
+<body>
+
+    <div id="menu">
+        <h1> BOMBEROS</h1>
+        <P>Sistema de emergencias</P>
+        <nav>
+            <a href="index.html" id="inicio-menu">Inicio</a>
+            <div id="textos-azules">
+                <a href="emergencias.html">Incidentes</a>
+                <a href="materiales.html">Materiales</a>
+                <a href="vehiculos.html">Vehículos</a>
+            </div>
+        </nav>
+  </div>
+
+
+    <div id="principal">
+        <header>
+            <h1>Materiales</h1>
+            <p>Guardia General Daniel Cerri</p>
+            <img src="Imagenes/INICIO.png">
+            <p id="fecha">9/10/2026</p>
+        </header>
+
+        <div id="tabla-registro">
+
+       
+            <div class="tarjeta">
+                <h2>Agregar vehículo</h2>
+
+                <div class="fila fila-vehiculo">
+                        <div class="grupo">
+                            <label for="v-numero">Número</label>
+                            <input class="campo" type="number" id="v-numero" min="1" placeholder="Ej: 5">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="v-tipo">Tipo</label>
+                        <select class="campo" id="v-tipo">
+                            <option value="">Elegir tipo...</option>
+                            <option value="autobomba">Autobomba</option>
+                            <option value="rescate">Rescate</option>
+                            <option value="forestal">Forestal</option>
+                            <option value="ambulancia">Ambulancia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo">
+                        <label for="v-patente">Patente</label>
+                        <input class="campo" type="text" id="v-patente" placeholder="ej: AB167SV">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="v-estado">Estado</label>
+
+                        <select class="campo" id="v-estado">
+                            <option value="">Elegir...</option>
+                            <option value="operativo">Operativo</option>
+                            <option value="reparacion">En reparacion</option>
+                            <option value="fuera">Fuera de servicio</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="fila fila-horas">
+                    <div class="grupo">
+                        <label for="v-salida">Hora de salida</label>
+                        <input class="campo" type="time" id="v-salida">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="v-entrada">Hora de entrada</label>
+                        <input class="campo" type="time" id="v-entrada">
+                    </div>
+                </div>
+
+                <div class="botones">
+                    <button class="boton-guardar">Guardar vehículo</button>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+             <h2>Listado de vehículos</h2>
+                <div class="tabla-scroll">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Número</th>
+                            <th>Tipo</th>
+                            <th>Patente</th>
+                            <th>Estado</th>
+                            <th>H. salida</th>
+                            <th>H. entrada</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Móvil 1</td>
+                            <td>Autobomba</td>
+                            <td>AB123CD</td>
+                            <td><span class="estado operativo">Operativo</span></td>
+                            <td>14:20</td>
+                            <td>15:45</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Móvil 2</td>
+                            <td>Rescate</td>
+                            <td>AC456EF</td>
+                            <td><span class="estado operativo">Operativo</span></td>
+                            <td>09:10</td>
+                            <td>10:30</td>
+                        </tr>
+                            
+                        <tr>
+                            <td>3</td>
+                            <td>Móvil 3</td>
+                            <td>Forestal</td>
+                            <td>AD789GH</td>
+                            <td><span class="estado reparacion">En reparación</span></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                            
+                        <tr>
+                            <td>4</td>
+                            <td>Móvil 4</td>
+                            <td>Ambulancia</td>
+                            <td>AE012IJ</td>
+                            <td><span class="estado operativo">Operativo</span></td>
+                            <td>18:05</td>
+                            <td>19:00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            
+            <h2>Salidas a emergencias</h2>
+            <div class="tabla-scroll">
+                <table>
+                    <tr>
+                        <th>ID emergencia</th>
+                        <th>Tipo de emergencia</th>
+                        <th>Dirección</th>
+                        <th>Vehículo</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Incendio</td>
+                        <td>Alem 2456</td>
+                        <td>Móvil 1</td>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Incendio</td>
+                        <td>Alem 2456</td>
+                        <td>Móvil 2</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Accidente de tránsito</td>
+                        <td>Ruta 3 km 690</td>
+                        <td>Móvil 4</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <p>© 2026 Rando Rihana Bomberos voluntarios - Todos los derechos reservados.</p>
+        <img src="Imagenes/fondoPantallaA.jpg">
+    </footer>
+
+
+    
+</body>
+</html>

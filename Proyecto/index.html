@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de control</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div id="menu">
+    <h1> BOMBEROS</h1>
+    <P>Sistema de emergencias</P>
+      <nav>
+        <a href="index.html" id="inicio-menu">Inicio</a>
+        <div id="textos-azules">
+        <a href="emergencias.html">Incidentes</a>
+        <a href="materiales.html">Materiales</a>
+        <a href="vehiculos.html">Vehículos</a>
+
+        </div>
+      </nav>
+  </div>
+
+
+  <div id="principal">
+    <header>
+      <h1>Bomberos</h1>
+      <p>Guardia General Daniel Cerri</p>
+      <img src="Imagenes\INICIO.png">
+      <p id="fecha">9/11/2026</p> <!-- aca haria con el javaScript para que diga la hora  -->
+    </header>
+    
+    <h1>Panel de control</h1>
+    <h2>Bienvenido, bombero/a</h2>
+    <p>Aqui podras verificar y gestionar las emergencias en el sistema.</p>
+
+    <button id="boton-emergencias"> <a href="emergencias.html">+ Agregar emergencia</a></button>
+
+    <div id="tablas">
+
+      <div id="tabla-emergencias">
+        <div id="texto1">
+          <h1>Emergencias hoy</h1>
+          <h2>1</h2>
+        </div>
+      </div>
+
+      <div id="emergencias-vista">
+          <h1>Ultimas emergencias</h1>
+          <p>Vista previa de las emergencias</p>      
+          <table class="tabla-emergencias">  
+
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Dirección</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Incendio</td>
+                <td>Av. Colón 980</td>
+              </tr>
+
+              <tr>
+                <td>Accidente de tránsito</td>
+                <td>Ruta 3</td>
+              </tr>
+
+              <tr>
+                <td>Fuga de gas</td>
+                <td>Calle Las Heras 340</td>
+              </tr>
+
+              <tr>
+                <td>Accidente de tránsito</td>
+                <td> Alsina 67</td>
+              </tr>
+            </tbody>     
+
+          </table>
+        </div>
+
+          
+
+      <div id="tabla-vahiculos">
+        <div id="texto3">
+          <h1>Vehiculos disponible</h1>
+          <p>Vista previa de vehiculos</p>
+
+          <table>
+              <thead>
+                <tr>
+                  <th>Vehículo</th>
+                  <th>Estado</th>
+                </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Movil 1</td>
+              <td><span class="estado-disponible">Disponible</span></td>
+            </tr>
+
+            <tr>
+              <td>Movil 2</td>
+              <td><span class="estado-servicio">En servicio</span></td>
+            </tr>
+
+            <tr>
+              <td>Movil 4</td>
+              <td><span class="estado-mantenimiento">Mantenimiento</span></td>
+            </tr>
+
+          </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tabla-materiales">
+        <div id="textos4">
+          <h1>Alerta de materiales</h1>
+          <p>Si los materiales aparecen acá, es necesario revisar o cambiarlos</p>
+        </div>
+        <!-- Cuando aparezca el estado rojo voy a poner una alerta de que se tiene que cambiar -->
+
+        <table>
+          <head>
+            <tr>
+              <th>Material</th>
+              <th>Estado</th>
+            </tr>
+          </head>
+
+          <tbody>
+            <tr class="fila-roja">
+              <td>Mangueras</td>
+              <td><span id="estado-rojo">⚠ ROJO</span></td>
+            </tr>
+
+            <tr class="fila-amarilla">
+              <td>Cuerdas</td>
+              <td><span id="estado-amarillo">AMARILLO</span></td>
+            </tr>
+
+            <tr class="fila-amarilla">
+              <td>Arnés</td>
+              <td><span id="estado-amarillo">AMARILLO</span></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+   
+  <footer>
+    <p>	© 2026 Rando Rihana Bomberos voluntarios - Todos los derechos reservados.</p>
+    <img src="Imagenes\fondoPantallaA.jpg">
+  </footer>
+
+  
+</body>
+</html>
